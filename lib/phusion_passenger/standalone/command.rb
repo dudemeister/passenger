@@ -176,7 +176,7 @@ private
 		
 		File.open(@config_filename, 'w') do |f|
 			f.chmod(0644)
-			template_filename = File.join(TEMPLATES_DIR, "standalone", "config.erb")
+			template_filename = @options[:nginx_config] || File.join(TEMPLATES_DIR, "standalone", "config.erb")
 			require_erb
 			erb = ERB.new(File.read(template_filename))
 			

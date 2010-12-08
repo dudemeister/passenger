@@ -194,6 +194,10 @@ private
 				wrap_desc("Where to store the PID file")) do |value|
 				@options[:pid_file] = value
 			end
+			opts.on("--nginx-config FILENAME", String,
+				wrap_desc("Nginx config template to override default")) do |value|
+				@options[:nginx_config] = value
+			end
 			opts.on("--nginx-bin FILENAME", String,
 				wrap_desc("Nginx binary to use as core")) do |value|
 				@options[:nginx_bin] = value
