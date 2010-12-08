@@ -33,8 +33,8 @@ end
 spec = Gem::Specification.new do |s|
 	s.platform = Gem::Platform::RUBY
 	s.homepage = "http://www.modrails.com/"
-	s.summary = "Easy and robust Ruby web application deployment"
-	s.name = "passenger"
+	s.summary = "Easy and robust Ruby web application deployment, ADDED: custom nginx config for standalone."
+	s.name = "passenger_dudemeister"
 	s.version = VERSION_STRING
 	s.rubyforge_project = "passenger"
 	s.author = "Phusion - http://www.phusion.nl/"
@@ -53,7 +53,7 @@ spec = Gem::Specification.new do |s|
 		"-S" << "-N" << "-p" << "-H" <<
 		'--main' << 'README' <<
 		'--title' << 'Passenger Ruby API'
-	s.description = "Easy and robust Ruby web application deployment."
+	s.description = "Easy and robust Ruby web application deployment, ADDED: custom nginx config for standalone."
 end
 
 Rake::GemPackageTask.new(spec) do |pkg|
